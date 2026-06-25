@@ -1,0 +1,97 @@
+body{
+    background:#050b0d;
+    color:white;
+    min-height:100vh;
+    fornt-family:arial;
+}
+.one{
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+
+}
+.logo{
+    color:#22c55e;
+    font-weight:700
+}
+.green{
+    color:#22c55e;
+
+}
+.feature-box{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+} 
+.feature-icon{
+    width:60px;
+    height:60px;
+    border:1px solid rgba(255,255,255,.1);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #22c55e;
+    font-size: 25px;
+}
+.login-card{
+    background: rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 50px;
+}
+.form-control{
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.15);
+    color:white;
+    height:55px;
+}
+.flow-control:focus{
+    background:transparent;
+    color:white;
+    border-color:#22c55e;
+
+
+}
+.btn-green{
+    background: #22c55e;
+    color: white;
+    height:55px;
+    font-size:20px;
+    
+}
+.btn-grren:hover{
+    background: #16a34a;
+}
+.social-btn{
+     border: 1px solid rgba(255,255,255,.15);
+    color:white;
+    padding:15px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: block;
+
+}
+.social-btn:hover{
+    color:white;
+
+}
+.left-section{
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+.inventory-image{
+    position:absolute;
+    bottom:30px;
+    left:58%;
+    transform:translateX(-50%);
+    width:550px;
+    max-width:90%;
+    z-index:1;
+}
+.inventory-image img{
+    width:100%;
+    height:auto;
+}
