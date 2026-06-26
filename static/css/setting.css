@@ -1,0 +1,53 @@
+body{
+    background: #0b1220;
+    color:white;
+
+}
+.sidebar{
+    min-height:100vh;
+    background-color: #08111d;
+    border-right: 1px solid #1f2937;
+}
+.card-dark{
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 15px;
+
+}
+.card-dark{
+    color:white;
+    font-weight: bold;
+}
+.form-control,
+.form-select{
+    background: #1f2937;
+    color:white;
+}
+.form-control:focus,
+.form-select:focus{
+    background: #1f2937;
+    color:white;
+}
+::placeholder{
+    color: white !important;
+    opacity: 0.7;
+}
+.active-menu{
+    background: #16a34a;
+    border-radius: 10px;
+}
+.table{
+    color:white;
+}
+.status-active{
+    background: #16a34a;
+    padding: 5px 10px;
+    border-radius:20px;
+
+}
+.status-inactive{
+    background: gray;
+    padding: 5px 10px;
+    border-radius:20px;
+    
+}
