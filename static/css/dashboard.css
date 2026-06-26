@@ -1,0 +1,33 @@
+body{
+    background-color:#0b1120;
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+}
+.bi-three-dots-vertical{
+    position:absolute;
+    top:20px;
+    right:20px;
+    color:#0a0b0b;
+}
+.card{
+    background:#1a1f2e;
+    color:#ffffff;
+    border:1px solid #2d3748;
+    border-radius:15px;
+}
+
+.table{
+    color:#ffffff;
+}
+
+.table th{
+    background:#222838;
+    color:#ffffff;
+    border:none;
+}
+
+.table tbody td{
+    background:#1a1f2e;
+    color:#ffffff;
+    border-color:#2d3748;
+}

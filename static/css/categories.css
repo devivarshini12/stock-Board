@@ -1,0 +1,50 @@
+body {
+    background: #0b1120;
+    color: white;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background: #091018;
+}
+
+.card-dark {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 15px;
+}
+
+.category-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 15px;
+
+}
+
+
+.green {
+    color: #22c55e;
+}
+
+.orange {
+    color: #f59e0b;
+}
+
+.blue {
+    color: #3b82f6;
+}
+
+.red {
+    color: #ef4444;
+}
+
+.bi-person-standing-dress {
+    background: #6f42c1;
+}
+
+.table th {
+    background: #222838;
+    color: #ffffff;
+    border: none;
+}
+
