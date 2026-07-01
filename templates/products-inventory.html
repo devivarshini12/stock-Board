@@ -28,42 +28,42 @@
                 <ul class="nav flex-column">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/dashboard">
                             <i class="bi bi-grid"></i>
                             Dashboard
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link active" href="/products">
                             <i class="bi bi-box"></i>
                             Products
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/add-product">
                             <i class="bi bi-plus-circle"></i>
                             Add Product
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/alerts">
                             <i class="bi bi-bell"></i>
                             Alerts
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/categories">
                             <i class="bi bi-folder"></i>
                             Categories
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/settings">
                             <i class="bi bi-gear"></i>
                             Settings
                         </a>
@@ -83,7 +83,7 @@
 
                         <form class="d-flex w-50">
 
-                            <input class="form-control" type="search" placeholder="Search Products">
+                            <input id="searchInput" class="form-control" type="search" placeholder="Search Products">
 
                         </form>
 
@@ -236,30 +236,38 @@
                         <div class="row">
                             <div class="row mt-4">
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" placeholder="Search Products">
+                                    <input id="searchInput" type="text" class="form-control" placeholder="Search Products">
                                 </div>
 
                                 <div class="col-md-2">
-                                    <select class="form-control">
-                                        <option>All Categories</option>
+                                    <select id="categoryFilter" class="form-control">
+                                        <option value="">All Categories</option>
                                     </select>
                                 </div>
 
                                 <div class="col-md-2">
-                                    <select class="form-control">
-                                        <option>Stock Status</option>
+                                    <select id="statusFilter" class="form-control">
+                                        <option value="">Stock Status</option>
+                                        <option value="in stock">In Stock</option>
+                                        <option value="low stock">Low Stock</option>
+                                        <option value="out of stock">Out of Stock</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <button class="btn btn-outline-light">
+                                    <button id="clearFiltersBtn" type="button" class="btn btn-outline-light">
                                         Clear Filters
                                     </button>
                                 </div>
                                 <div class="col-md-2">
 
-                                    <select class="form-control">
+                                    <select id="sortSelect" class="form-control">
 
-                                        <option selected>Sort By</option>
+                                        <option value="">Sort By</option>
+                                        <option value="name">Product Name</option>
+                                        <option value="price-low">Price: Low to High</option>
+                                        <option value="price-high">Price: High to Low</option>
+                                        <option value="stock">Stock Quantity</option>
+                                        <option value="category">Category</option>
 
                                         <option value="name">Product Name</option>
 
@@ -283,6 +291,7 @@
 
                                 </div>
                                 <div class="card mt-4">
+                                    <div id="productMessage" class="m-3"></div>
 
                                     <div class="card-body">
 
@@ -304,154 +313,7 @@
 
                                             </thead>
 
-                                            <tbody>
-
-                                                <tr>
-                                                    <td>Wireless Headphone</td>
-                                                    <td>WH001</td>
-                                                    <td>Electronics</td>
-                                                    <td>120</td>
-                                                    <td>$299</td>
-
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            In Stock
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-sm btn-primary">
-                                                            Edit
-                                                        </button>
-
-                                                        <button class="btn btn-sm btn-danger">
-                                                            Delete
-                                                        </button>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Smart Watch Series 8</td>
-                                                    <td>SW-800</td>
-                                                    <td>ElectroniCS</td>
-                                                    <td>15</td>
-                                                    <td>$399.99</td>
-
-                                                    <td>
-                                                        <span class="badge bg-warning">
-                                                            Low Stock
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-sm btn-primary">
-                                                            Edit
-                                                        </button>
-
-                                                        <button class="btn btn-sm btn-danger">
-                                                            Delete
-                                                        </button>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Stainless Steel Water Bottle</td>
-                                                    <td>WS-100</td>
-                                                    <td>Home & Kitchen</td>
-                                                    <td>50</td>
-                                                    <td>$24.99</td>
-
-                                                    <td>
-                                                        <span class="badge bg-danger">
-                                                            Out of Stock
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-sm btn-primary">
-                                                            Edit
-                                                        </button>
-
-                                                        <button class="btn btn-sm btn-danger">
-                                                            Delete
-                                                        </button>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Ergonomic Office Chair</td>
-                                                    <td>EOC-200</td>
-                                                    <td>Furniture</td>
-                                                    <td>45</td>
-                                                    <td>$189.99</td>
-
-                                                    <td>
-                                                        <span class="badge bg-success">
-                                                            In Stock
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-sm btn-primary">
-                                                            Edit
-                                                        </button>
-
-                                                        <button class="btn btn-sm btn-danger">
-                                                            Delete
-                                                        </button>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Running Shoes</td>
-                                                    <td>RS-300</td>
-                                                    <td>Footwear</td>
-                                                    <td>8</td>
-                                                    <td>$79.99</td>
-
-                                                    <td>
-                                                        <span class="badge bg-danger">
-                                                            OUT ofStock
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-sm btn-primary">
-                                                            Edit
-                                                        </button>
-
-                                                        <button class="btn btn-sm btn-danger">
-                                                            Delete
-                                                        </button>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Travel Backpack</td>
-                                                    <td>TB-400</td>
-                                                    <td>Accessories</td>
-                                                    <td>25</td>
-                                                    <td>$49.99</td>
-
-                                                    <td>
-                                                        <span class="badge bg-danger">
-                                                            Out of Stock
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-sm btn-primary">
-                                                            Edit
-                                                        </button>
-
-                                                        <button class="btn btn-sm btn-danger">
-                                                            Delete
-                                                        </button>
-                                                    </td>
-
-                                                </tr>
-                                            </tbody>
-
+                                            <tbody id="productTableBody"></tbody>
                                         </table>
 
                                     </div>
@@ -475,6 +337,7 @@
     </div>
     </div>
 
+    <script src="../static/js/products-inventory.js"></script>
 
 </body>
 
